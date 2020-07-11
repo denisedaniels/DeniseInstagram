@@ -8,11 +8,19 @@
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/instagram" />
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_weight="1"
+        android:background="@android:drawable/edit_text"
         android:ems="10"
         android:hint="username" />
 
@@ -21,15 +29,19 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_weight="1"
+        android:background="@android:drawable/edit_text"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLogin"
+        style="@style/LoginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_weight="1"
         android:text="Login" />
 </LinearLayout>
