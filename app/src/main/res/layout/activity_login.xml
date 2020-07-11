@@ -43,5 +43,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_weight="1"
-        android:text="Login" />
+        android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        style="@style/SignUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:text="SIGN UP"/>
 </LinearLayout>
