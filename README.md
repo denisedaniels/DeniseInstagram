@@ -27,7 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='instagram.gif' title='Video Walkthrough ' width='' alt='Video Walkthrough' />
+<img src='Instagram.gif' title='Video Walkthrough ' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://www.screentogif.com/).
 
