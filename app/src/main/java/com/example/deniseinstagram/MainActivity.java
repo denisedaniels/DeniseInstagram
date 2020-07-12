@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+    private Button btnLogout;
     private File photoFile;
     private String photoFileName= "photo.jpg";
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btnCaptureImage= findViewById(R.id.btnCaptureImage);
         ivPostImage= findViewById(R.id.ivPostImage);
         btnSubmit= findViewById(R.id.btnSubmit);
+        btnLogout= findViewById(R.id.btnLogout);
 
         //Add click listener to button capture image
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +81,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v){
+                Log.i(TAG, "onClick login button");
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser();
+                goLoginActivity();
+            }
+        });
+
+    }
+
+    // Use intent system to navigate to the new activity
+    private void goLoginActivity() {
+        Intent i=new Intent (this, LoginActivity.class);
+        startActivity(i);
+        finish();
     }
 
     //Method to launch camera
