@@ -37,4 +37,12 @@ public class Post extends ParseObject {
         put(KEY_USER,user);
     }
 
+    /*public String getTime(){
+        return getString(KEY_CREATED_KEY);
+    }
+
+    public void setTime(String createdAt){
+        put(KEY_CREATED_KEY,createdAt);
+    }*/
+
 }

@@ -62,12 +62,15 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView tvUsername;
         private ImageView ivImage;
         private TextView tvDescription;
+        //private TextView tvTime;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername=itemView.findViewById(R.id.tvUsername);
             ivImage=itemView.findViewById(R.id.ivImage);
             tvDescription=itemView.findViewById(R.id.tvDescription);
+            //tvTime=itemView.findViewById(R.id.tvTime);
         }
 
         public void bind(Post post) {
@@ -80,6 +83,8 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 //Use glide to load image
                 Glide.with(context).load(image.getUrl()).into(ivImage);
             }
+
+            //tvTime.setText(post.getTime());
 
         }
     }

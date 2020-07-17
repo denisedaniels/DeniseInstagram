@@ -38,8 +38,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="0dp"
+        android:textColor="#000000"
         tools:text="This is a great picture. Please like and share! Spread love!" />
+
+    <!--<TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="July 10 @ 3:00pm" />-->
 </LinearLayout>
