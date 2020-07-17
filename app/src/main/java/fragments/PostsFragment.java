@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,6 +37,9 @@ public class PostsFragment extends Fragment {
     //List of all posts
     protected List<Post> allPosts;
 
+    //Reference swipe container for pull refresh
+    SwipeRefreshLayout swipeContainer;
+
     public PostsFragment() {
         // Required empty public constructor
     }
@@ -57,6 +61,25 @@ public class PostsFragment extends Fragment {
         //Create the adapter
         allPosts= new ArrayList<>();
         adapter= new PostsAdapter(getContext(), allPosts);
+
+
+        //Reference swipe container by ID
+        swipeContainer=view.findViewById(R.id.swipeContainer);
+        //Setting color of refresh
+        swipeContainer.setColorSchemeResources(
+                android.R.color.holo_purple,
+                android.R.color.holo_blue_dark,
+                android.R.color.holo_red_light,
+                android.R.color.holo_green_light,
+                android.R.color.holo_blue_bright);
+        //Adding on refresh listener for pull refresh
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                queryPosts();
+            }
+        });
+
 
         //Set the adapter on the recycler view
         rvPosts.setAdapter(adapter);
@@ -85,8 +108,14 @@ public class PostsFragment extends Fragment {
                     //Logs information from all posts
                     Log.i(TAG, "Post" +post.getDescription()+ ", username: " +post.getUser().getUsername());
                 }
-                allPosts.addAll(posts);
-                adapter.notifyDataSetChanged();
+
+                adapter.clear();
+                adapter.addAll(posts);
+                swipeContainer.setRefreshing(false);
+
+                //Added before pull refresh was implemented
+                // allPosts.addAll(posts);
+                // adapter.notifyDataSetChanged();
             }
         });
     }

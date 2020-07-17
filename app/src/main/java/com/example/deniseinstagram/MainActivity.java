@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    //Logout user on option selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(item.getItemId()== R.id.logout){
