@@ -44,7 +44,7 @@ Describe any challenges encountered while building the app.
 
 
 
-# Part 2 - Denise-Instagram
+# Part 1 - Denise-Instagram
 
 DeniseInstagram is a photo sharing app similar to Instagram but using Parse as its backend.
 
