@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         //btnLogout= findViewById(R.id.btnLogout);
         bottomNavigationView= findViewById(R.id.bottom_navigation);
 
+
+
        /* btnLogout.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -97,6 +101,23 @@ public class MainActivity extends AppCompatActivity {
         });
         // Set default selection
         bottomNavigationView.setSelectedItemId(R.id.action_home);
+    }
+
+    //Creating menu for logout option
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu){
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()== R.id.logout){
+            ParseUser.logOut();
+            ParseUser currentUser = ParseUser.getCurrentUser();
+            goLoginActivity();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     // Use intent system to navigate to the new activity
