@@ -29,6 +29,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Added a menu to logout of app
+- [x] Created custom action bar 
 
 ## Video Walkthrough
 
