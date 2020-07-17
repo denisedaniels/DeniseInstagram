@@ -11,13 +11,9 @@
         android:id="@+id/btnCaptureImage"
         android:layout_width="52dp"
         android:layout_height="60dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-2dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="545dp"
+        android:layout_marginEnd="11dp"
         android:background="@drawable/camera" />
 
     <ImageView
@@ -32,6 +28,7 @@
         android:layout_marginEnd="2dp"
         tools:srcCompat="@tools:sample/avatars" />
 
+
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
@@ -40,13 +37,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="236dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="265dp"
         android:ems="10"
         android:hint="Description..."
         tools:layout_marginTop="20dp" />
-
 
     <Button
         android:id="@+id/btnSubmit"
@@ -59,17 +55,5 @@
         android:layout_marginStart="115dp"
         android:layout_marginBottom="159dp"
         android:text="SHARE" />
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="66dp"
-        android:background="@drawable/logout_button"
-        android:text="LOGOUT"
-        android:textColor="@color/cardview_light_background" />
 
 </RelativeLayout>

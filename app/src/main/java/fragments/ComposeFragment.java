@@ -48,7 +48,6 @@ public class ComposeFragment extends Fragment {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
-    private Button btnLogout;
     private File photoFile;
     private String photoFileName= "photo.jpg";
 
@@ -76,7 +75,7 @@ public class ComposeFragment extends Fragment {
         btnCaptureImage= view.findViewById(R.id.btnCaptureImage);
         ivPostImage= view.findViewById(R.id.ivPostImage);
         btnSubmit= view.findViewById(R.id.btnSubmit);
-        btnLogout= view.findViewById(R.id.btnLogout);
+
 
 
         //Add click listener to button capture image
@@ -107,24 +106,7 @@ public class ComposeFragment extends Fragment {
             }
         });
 
-        /*btnLogout.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v){
-                //Log.i(TAG, "onClick login button");
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser();
-                goLoginActivity();
-            }
-        });*/
     }
-
-    // Use intent system to navigate to the new activity
-    /*private void goLoginActivity() {
-        Intent i=new Intent (this, LoginActivity.class);
-        startActivity(i);
-        finish();
-    }*/
 
     //Method to launch camera
     private void launchCamera() {
