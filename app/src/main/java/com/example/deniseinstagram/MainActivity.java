@@ -37,6 +37,7 @@ import java.util.List;
 
 import fragments.ComposeFragment;
 import fragments.PostsFragment;
+import fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_profile:
                     default:
-                        fragment = new ComposeFragment();
+                        fragment = new ProfileFragment();
                         //Adding toast for testing
                         //Toast.makeText(MainActivity.this,"Profile",Toast.LENGTH_SHORT).show();
                         break;
